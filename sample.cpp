@@ -148,8 +148,6 @@ int main()
 	mObject->attachShape(*box);
 	mScene->addActor(*mObject);
 
-	//mObject->addForce(PxVec3(0.2, 0.0, 0.0));
-
 	PxTransform anotherO(PxVec3(10.0, 1.0, 0.0));
 	PxShape* anotherBox = mPhysics->createShape(PxBoxGeometry(1, 1, 1), *mMaterial);
 	PxRigidDynamic* anotherObject = mPhysics->createRigidDynamic(anotherO);
@@ -157,8 +155,6 @@ int main()
 	anotherBox->setFlag(PxShapeFlag::eSCENE_QUERY_SHAPE, true);
 	anotherObject->attachShape(*anotherBox);
 	mScene->addActor(*anotherObject);
-
-	//anotherObject->addForce(PxVec3(-0.0, 0.0, 0.0));
 
 	for (PxU32 i = 0; i < 20000; i++) {
 		if (i >= 10000 && i<= 10020) {
