@@ -150,9 +150,6 @@ int main()
 
 	//mObject->addForce(PxVec3(0.2, 0.0, 0.0));
 
-	//Exercise: write a for loop that creates multiple rigid dynamic actors with different shapes.
-	//Change the position vector for each one.
-
 	PxTransform anotherO(PxVec3(10.0, 1.0, 0.0));
 	PxShape* anotherBox = mPhysics->createShape(PxBoxGeometry(1, 1, 1), *mMaterial);
 	PxRigidDynamic* anotherObject = mPhysics->createRigidDynamic(anotherO);
